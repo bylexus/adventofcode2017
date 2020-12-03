@@ -12,5 +12,6 @@ def readfile(file, separator = None):
             line = line.strip()
             if separator:
                 line = line.split(separator)
-            lines.append(line)
+            if len(line) > 0:
+                lines.append(line)
     return lines
