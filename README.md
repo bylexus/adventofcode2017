@@ -6,4 +6,11 @@ My year 2017 solutions for [ Advent of Code ](https://adventofcode.com/2017).
 I do these puzzles actually in 2020 - As I started with AoC in 2018, I missed that one,
 so I will do it now just for fun.
 
+All solutions are done in python 3:
+
+```
+$ python3 -m venv env
+$ source env/bin/activate
+$ python nn-xxxxxxxxx.py
+```
 
