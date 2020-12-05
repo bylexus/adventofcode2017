@@ -12,6 +12,8 @@ def readfile(file, separator = None):
             line = line.strip()
             if separator:
                 line = line.split(separator)
-            if len(line) > 0:
-                lines.append(line)
+            lines.append(line)
     return lines
+
+def remove_empty(lst):
+    return list(filter(None, lst))
