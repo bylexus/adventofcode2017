@@ -8,11 +8,12 @@ def measure(fn):
     fn()
     return time.time() - start
 
-def readfile(file, separator = None):
+def readfile(file, separator = None, strip = True):
     lines = []
     with open(file) as fp:
         for line in fp.readlines():
-            line = line.strip()
+            if (strip):
+                line = line.strip()
             if separator:
                 line = line.split(separator)
             lines.append(line)
@@ -68,3 +69,7 @@ def knot_hash(input):
 
     # form hex hash:
     return ''.join('{:02x}'.format(n) for n in chunks)
+
+
+def manhattan(coords):
+    return sum(map(abs, coords))
